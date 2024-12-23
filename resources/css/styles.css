@@ -1,0 +1,378 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    text-align: center;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+nav {
+    background-color: #4a5d23; /* Olive Green */
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents truncation of text */
+}
+
+        /* Hover effect with earthy colors */
+nav ul li a:hover {
+    background-color: #8b4513; /* Saddle brown color on hover */
+    color: #ffffff; /* Keep text white for contrast */
+}
+
+/* Active/Clicked state with earthy tones */
+nav ul li a.active {
+    background-color: #eae5d3; /* Light taupe background for active state */
+    color: #4a5d23; /* Olive green text */
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.hamburger div {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+.nav-links {
+    display: flex;
+}
+.hero {
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    background-color: #eae5d3; /* Taupe */
+    text-align: left;  /* Align text to the left */
+    gap: 20px; /* Space between the image and text */
+}
+
+.hero .image {
+    flex: 1;
+    text-align: left; /* Align the image to the left */
+}
+
+.hero .image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero .text {
+    flex: 1;
+    text-align: left; /* Align text to the right */
+}
+
+.hero .text h1 {
+    color: #4a5d23; /* Olive Green */
+}
+
+.hero .text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.button {
+position: relative;
+text-align: center;
+padding-bottom: 20px; /* Adjust as needed */
+background-color: #eae5d3; /* Taupe */
+}
+
+.hero-button {
+background-color: #4a5d23;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+font-size: 1.1em;
+transition: transform 0.2s ease, background-color 0.3s ease;
+display: inline-block;
+text-decoration: none;
+}
+
+.hero-button:hover {
+background-color: #8b4513; /* Lighter or darker shade */
+transform: scale(1.05);
+}
+
+.hero-button:active {
+background-color: #eae5d3; /* Click effect color */
+transform: scale(0.95);
+}
+
+.team-section, .services-section, .contact-section {
+    padding: 30px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.team-section h1, .services-section h2 {
+    color: #4a5d23; /* Olive Green */
+    margin-bottom: 20px;
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.team-member {
+    position: relative;
+    width: 90%;
+    max-width: 300px; /* Prevents member cards from getting too wide */
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light taupe background for the card */
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates that it's clickable */
+    text-align: center;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 0.8;
+}
+
+.team-member h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5rem;
+    color: #4a4a4a; /* Darker shade for text */
+}
+
+.team-member p {
+    margin-top: 15px;
+    color: #777;
+    transition: color 0.3s ease;
+}
+
+.team-member:hover p {
+    color: #333; /* Darken the text on hover */
+}
+
+.team-member .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .overlay {
+    opacity: 1;
+}
+
+.team-member .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .overlay-text {
+    opacity: 1;
+}
+
+/* Modal Style */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 100; /* Ensure it's on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    overflow-y: auto; /* rule ensures that the user can scroll through the content */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    color: #4a5d23; /* Olive Green */
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+.services-section {
+    padding: 50px 20px;
+    background-color: #eae5d3; /* Taupe background */
+    text-align: center;
+}
+
+.services-section h2 {
+    color: #4a5d23; /* Olive Green */
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 30px; /* Space between cards */
+}
+
+.service-card {
+    background-color: #fff; /* White background for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    text-align: left;
+}
+
+.service-card h3 {
+    color: #4a5d23; /* Olive Green */
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #333;
+    line-height: 1.6;
+}
+
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 20px 20px;
+}
+footer {
+    background-color: #4a5d23;;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 10px;
+    cursor: pointer;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+    nav ul.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin: auto;
+    }
+    .hero, .team-section, .services-section, .contact-section {
+        padding: 20px 10px;
+    }
+    .team-members {
+        flex-direction: column;
+    }
+    .team-member {
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+    .services-section ul {
+        text-align: center;
+        padding-left: 0;
+    }    
+
+    .services-grid {
+            grid-template-columns: 1fr; /* Stack cards in a single column on smaller screens */
+    }    
+
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .hero .text {
+        text-align: center;
+    }
+
+    .hero .image {
+        text-align: center;
+    }
+
+      /* Adjust button for mobile */
+    .hero-button {
+        width: 100%; /* Full-width button */
+        padding: 15px;
+        font-size: 1.2em;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
