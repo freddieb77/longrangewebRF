@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Long Range Financial</title>
+    <link rel="stylesheet" href="./resources/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./resources/images/LongRangeFinancial_Logo.png" alt="Long Range Financial Logo" width="200">
+    </header>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="dfa.html">Divorce</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="text">
+            <h1>Welcome to Long Range Financial</h1>
+            <p> Experience: Since 1989, Perry and his team have guided clients in planning for and pursuing their financial goals, navigating through multiple recessions, as well as bull and bear markets.</p>
+            <p>Independence: We have partnered with the # 1 independent broker-dealer in the U.S. (Based on total revenues, Financial Planning magazine 1996-2023) and one of the largest RIA custodians in the country. This independence enables us to focus exclusively on helping our clients pursue their goals, free from company quotas.</p>
+            <p>Teacher: With the heart of a teacher, Perry excels at simplifying complex financial concepts, making them accessible and easy to understand. We believe that a solid grasp of financial principles is essential for our clients to confidently pursue their goals.</p>
+            <p>Care: Our genuine concern for our clients' success drives everything we do. We are fully dedicated to helping our clients achieve their financial aspirations.</p>
+        </div>
+        <div class="image">
+            <img src="./resources/images/fieldSunset.jpg" alt="Sunset over soccer field">
+        </div>
+    </div>
+
+    <div class="button">
+        <a href="https://brokercheck.finra.org/individual/summary/2131012" target="_blank"><buttton type="button" class="hero-button">FINRA Broker Check</buttton></a>
+    </div>
+
+    <div class="team-section" id="team">
+        <h1>Our Team</h1>
+        <div class="team-members">
+            <div class="team-member" onclick="openModal('perry-modal')">
+                <img src="./resources/images/IMG_9534JV.jpg" alt="Perry S. Long">
+                <p>Perry S. Long, CFP®, CDFA™: Dedicated to helping individuals and families achieve their financial goals...More Info</p>
+            </div>
+            <div class="team-member" onclick="openModal('shelly-modal')">
+                <img src="./resources/images/IMG_9524JV (002).jpg" alt="Shelly L. Long">
+                <p>Shelly L. Long: Operations...More Info</p>
+            </div>
+            <div class="team-member" onclick="openModal('ben-modal')">
+                <img src="./resources/images/team-placeholder.png" alt="Benjamin S. Long">
+                <p>Benjamin S. Long: Operations Manager for Long Range Financial, Inc...More Info</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modals for Team Members -->
+    <div id="perry-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('perry-modal')">&times;</span>
+            <h2>Perry S. Long, CFP®, CDFA™</h2>
+            <p>Perry is dedicated to helping individuals and families pursue their financial goals. With over 30 years of experience in investing and financial planning, he has guided his clients towards reaching their financial objectives.</p>
+            <p>He has attained the following professional Certification and Designation:</p>
+            <p>CERTIFIED FINANCIAL PLANNER® in December 1993 </p>
+            <p>Certified Divorce Financial Analyst (CDFA®) in December 2010</p>
+            <p>
+                <a href="https://brokercheck.finra.org/individual/summary/2131012" target="_blank" title="Go to FINRA BrokerCheck">FINRA Broker Check</a>
+            </p>
+            <p>Perry earned his Bachelor's Degree from Minnesota State University, Mankato, in December 1988. Originally from Southern Minnesota, he now lives in New Hope with his wife, Shelly. They have three adult sons. Perry and Shelly are active members of River Valley Church in Maple Grove. Perry enjoys golf, hunting, fly fishing, and photography in his leisure time.</p>
+        </div>
+    </div>
+    
+    <div id="shelly-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('shelly-modal')">&times;</span>
+            <h2>Shelly L. Long</h2>
+            <p>Shelly serves in Operations</p>
+            <p>Shelly is a passionate reader in her free time. She also enjoys spending time with her sons and going for walks with her husband Perry and dog Raven.</p>
+        </div>
+    </div>
+    
+    <div id="ben-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ben-modal')">&times;</span>
+            <h2>Benjamin S. Long</h2>
+            <p>Ben serves as the Operations Manager for Long Range Financial, Inc.</p>
+            <p>Ben graduated Summa Cum Laude from North Central University with a Bachelor of Science degree in Marketing, while playing four years of collegiate golf.</p>
+            <p>In his free time, Ben enjoys playing golf, reading, and camping.</p>
+        </div>
+    </div>
+    
+
+    <div class="services-section" id="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Financial Planning</h3>
+                <p>Perry has always enjoyed helping people creatively plan and strategize towards their financial goals. Committed to having the knowledge and expertise necessary to best help the people he is serving, Perry obtained the CERTIFIED FINANCIAL PLANNER® certification in 1993.</p> 
+                <p>For more information on the CFP®: <a href="https://www.cfp.net/why-cfp-certification/the-standard-of-excellence" target="_blank">Visit cfp.net</a></p>
+                <p><a href="./resources/Articles/KiplingersPersonalFinance.pdf" target="_blank">"How to Get the Financial Advice That's Right for You"</a> © 2018 CFP Board. All rights reserved. Reproduced with permission.</p>
+                <p>Certified Financial Planner Board of Standards Center for Financial Planning, Inc. owns and licenses the certification marks CFP® and CERTIFIED FINANCIAL PLANNER® in the United States to Certified Financial Planner Board of Standards, Inc., which authorizes individuals who successfully complete the organization’s initial and ongoing certification requirements to use the certification marks.</p>
+            </div>
+            <div class="service-card">
+                <h3>Investment Advisory</h3>
+                <p>Perry has been guiding clients through market and economic changes since 1991, providing customized investment management and tailored advice to navigate evolving financial landscapes.</p>
+            </div>
+            <div class="service-card">
+                <h3>Small Business Planning</h3>
+                <p>Perry has been a small business owner since 1989 and is passionate about supporting those who embrace America's Free Enterprise System. With extensive experience and deep knowledge, Perry is dedicated to helping small business owners succeed.</p>
+            </div>
+            <div class="service-card">
+                <h3>Divorce Planning</h3>
+                <p>Since 2011 Perry has been offering financial expertise to attorneys and their clients. He is committed to assisting individuals during this challenging life change by providing collaborative and insightful financial guidance throughout the process.</p>
+                <p>Please see the Divorce page for more information.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>11222 86th Ave N.<br>Maple Grove, MN 55369<br>Phone: 612-202-9236<br>Email: <a href="mailto:Perry@LongRangefinancial.com">Perry@LongRangefinancial.com</a></p>
+    </div>
+
+    <footer>
+        <p>
+            <a href="https://www.lpl.com/content/dam/lpl-www/documents/disclosures/lpl-financial-relationship-summary.pdf" target="_blank" title="Go to LPL Financial Form CRS">LPL Financial Form CRS</a> 
+        </p>
+        <p>    
+            Securities and advisory services offered through LPL Financial, a registered investment advisor, Member <a href="https://www.finra.org/" target="_blank" title="Go to FINRA Website">FINRA</a>/<a href="https://www.sipc.org/" target="_blank" title="Go to SIPC Website">SIPC</a>
+        </p>    
+        <p>
+            The LPL Financial Registered Representatives associated with this site may only discuss or transact business with residents of the states in which they are properly registered or licensed. No offers may be made or accepted from any resident of any other state.
+        </p>
+        <p>
+            <a href="https://brokercheck.finra.org/individual/summary/2131012" target="_blank" title="Go to FINRA BrokerCheck">FINRA Broker Check</a>
+        </p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Long Range Financial, Inc. All Rights Reserved.</p>
+        <p>
+            <a href="#privacy">Privacy Policy</a> | 
+            <a href="#terms">Terms of Service</a> 
+        </p>
+    </footer>
+</body>
+</html>
